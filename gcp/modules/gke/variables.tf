@@ -24,17 +24,17 @@ variable "zones" {
 variable "network" {
   type        = string
   description = "The VPC network to host the cluster in (required)"
-
+  default     = "default"
 }
 variable "network_project_id" {
   type        = string
   description = "The project ID of the shared VPC's host (for shared vpc support)"
-
 }
 
 variable "subnetwork" {
   type        = string
   description = "The subnetwork to host the cluster in (required)"
+  default     = "default"
 }
 variable "name" {
   default = "inception"
