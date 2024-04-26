@@ -11,4 +11,6 @@ module "gke" {
   create_service_account     = var.create_service_account
   regional                   = var.regional
   node_pools                 = var.node_pools
+  service_account            = var.service_account
+  network_project_id         = var.network_project_id
 }
