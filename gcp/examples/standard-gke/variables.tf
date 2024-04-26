@@ -12,10 +12,12 @@ variable "service_account" {
 variable "region" {
   type        = string
   description = "The region to host the cluster in (optional if zonal cluster / required if regional)"
+  default     = "us-central1"
 }
 variable "zones" {
   type        = list(string)
   description = "The zones to host the cluster in (optional if regional cluster / required if zonal)"
+  default     = "us-central1-a"
 }
 variable "network" {
   type        = string
