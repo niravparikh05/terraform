@@ -20,7 +20,7 @@ variable "zones" {
 variable "network" {
   type        = string
   description = "The VPC network to host the cluster in (required)"
-
+  default     = "default"
 }
 variable "network_project_id" {
   type        = string
@@ -30,7 +30,7 @@ variable "network_project_id" {
 variable "subnetwork" {
   type        = string
   description = "The subnetwork to host the cluster in (required)"
-
+  default     = "default"
 }
 variable "name" {
   description = "name of a node pool"
@@ -87,8 +87,12 @@ variable "node_pools_oauth_scopes" {
   description = "Map of lists containing node oauth scopes by node-pool name"
   default = {
     all = [
+      "https://www.googleapis.com/auth/devstorage.read_only",
       "https://www.googleapis.com/auth/logging.write",
       "https://www.googleapis.com/auth/monitoring",
+      "https://www.googleapis.com/auth/service.management.readonly",
+      "https://www.googleapis.com/auth/servicecontrol",
+      "https://www.googleapis.com/auth/trace.append"
     ]
   }
 }
