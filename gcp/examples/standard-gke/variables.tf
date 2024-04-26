@@ -107,7 +107,7 @@ variable "node_pools" {
     {
       name               = "inception-node-pool"
       machine_type       = "e2-medium"
-      node_locations     = "us-east1-b,us-east1-c"
+      node_locations     = "us-central1-a,us-central1-b"
       min_count          = 1
       max_count          = 100
       local_ssd_count    = 0
